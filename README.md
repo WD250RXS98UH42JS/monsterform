@@ -18,6 +18,7 @@ monsterform - a very customizable PHP feedback mail form based on PHPMailer
 # Installation
 Just put the files in place you want, and modify your HTML page.
 You can find the code examples in index.html and config.php.
+After that set your values in config.php, especially email credentials.
 
 ## Attention! 
 Names of input fields can be identical in config.php and your HTML!
