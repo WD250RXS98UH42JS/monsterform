@@ -1,12 +1,6 @@
 # monsterform
 monsterform - a very customizable PHP feedback mail form based on PHPMailer
 
-// monsterform
-// current version: 1.1
-// date: 16.01.2019
-// author: WD250RXS98UH42JS
-// license: MIT
-
 # Features:
 1. Very customizable settings for:
    - SMTP - you can send messages from any server with SMTP support;
