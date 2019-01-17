@@ -1,0 +1,40 @@
+<!--  
+    monsterform
+    version: 1.0
+    date: 11.01.2019
+    author: WD250RXS98UH42JS
+    license: MIT 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <form action="/scripts/form.php" method="post" enctype="multipart/form-data">
+        <p>Please, fill the fields below.</p>
+        <input name="username" type="text" placeholder="What's your name?"><br>
+        <input name="email" type="email" placeholder="Your email address" required><br>
+        <input name="phone" type="tel" placeholder="Your phone number"><br>
+        <textarea name="userComment" cols="30" rows="3" maxlength="1024" placeholder="Your comment or message"></textarea><br>
+    
+        <!-- This is container for file choose field - DO NOT CHANGE ANYTHING except multiple, accept or class tags -->
+        <!-- begin -->
+        <input name="attach[]" type="file" class="modalWindow_attach" multiple accept="image/*"><br>
+        <!-- end -->
+        
+        <!-- This is captcha container, you have to comment it if you dont need captcha in your form-->
+        <!-- begin -->
+        <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div><br>
+        <!-- end -->
+        
+        <input type="submit" value="Send">
+    </form>
+
+    <script src='https://www.google.com/recaptcha/api.js?hl=ru'></script>
+    
+</body>
+</html>
+
