@@ -23,7 +23,7 @@ After that set your values in config.php, especially email credentials.
 ## Attention! 
 Names of input fields can be identical in config.php and your HTML!
 
-## Screenshots
+# Screenshots
 This is form default view:
 
 ![main_form](https://user-images.githubusercontent.com/17432671/51320434-74340d00-1a68-11e9-9c43-ea80af25c167.png)
@@ -43,14 +43,15 @@ Mail received by site owner:
 All pages can be easily changed in config.php and index.html.
 Also, you can customize a view of mails for users and site owner by using HTML and CSS.
 
-## Dependencies:
+# Dependencies:
 autoload.php (part of Composer) - included;
 
 PHPMailer library - included.
 
-# 1.0:
- - release;
+# Changelog
+## 1.0:
+ * release;
 
-# 1.1:
- - added CSS for all show-to-user content;
- - some small fixes and improvements (especially for entered data validation);
+## 1.1:
+ * added CSS for all show-to-user content;
+ * some small fixes and improvements (especially for entered data validation);
