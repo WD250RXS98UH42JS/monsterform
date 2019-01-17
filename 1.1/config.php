@@ -8,6 +8,11 @@
 
 // ##### MAIL FORM CONFIGURATION FILE #####
 
+// Debug mode
+// If disabled, script will show html page to user (use it in production)
+// If enabled, user will see all log messages as plain text
+$debug = 1; // default: 0
+
 // Specify your custom names for form's fields
 // For <input name="custom_field">Name</input>:
 //$html_field_name = "custom_field";
@@ -33,6 +38,8 @@ $max_attached_files_count = 3;  // default: "3"
 // Max attaches size in MB
 // This value indicates total size of files
 $max_attached_files_size = 10;//MB, default: "10"
+// Allow attachment forwarding back to user in confirmation letter
+$forward_attach_to_user = 0; // default: 0
 
 // If enable, user will receive mail with confirmation of request receiving
 $allow_confirm_letter = 1; // default: "1"
@@ -62,6 +69,8 @@ $sitename = "<a href=\"http://sitename.domain\">sitename.domain</a>";
 // Default values for mail subject and body
 // They both encoding to UTF-8, so you can use cyrillic
 // Also you can use PHP-allowable variables, like $_POST[*], $* etc
+
+// Mail for user
 $customer_mail_subject = "Thank you for your request!";
 $customer_mail_body = 
 "
@@ -77,6 +86,7 @@ $customer_mail_body =
     </html>
 ";
 
+// Mail for site owner
 $mail_subject = "Request from $_POST[$html_field_name] ($_POST[$html_field_email])";
 $mail_body =
 "
