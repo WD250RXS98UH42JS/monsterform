@@ -1,0 +1,56 @@
+<!--  
+// monsterform
+// version: 1.1
+// date: 16.01.2019
+// author: WD250RXS98UH42JS
+// license: MIT
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+    <link rel="stylesheet" href="styles/common.css">
+</head>
+<body>
+	<section class="modalWindow_bg">
+		<div class="modalWindow_wrapper">
+			<form class="modalWindow_body" action="/scripts/form.php" method="post" enctype="multipart/form-data">
+				<p class="modalWindow_header">Please, fill the fields below.</p>
+				<input name="username" type="text" class="modalWindow_userName" placeholder="What's your name?">
+				<input name="email" type="email" class="modalWindow_userEmail" placeholder="Your email address" required>
+				<input name="phone" type="tel" class="modalWindow_userPhone" placeholder="Your phone number">
+				<textarea name="userComment" cols="30" rows="3" maxlength="1024" class="modalWindow_userComment" placeholder="Your comment or message"></textarea>
+
+                <!-- This is container for file choose field - DO NOT CHANGE ANYTHING except multiple, accept or class tags -->
+                <!-- begin -->
+                <input name="attach[]" type="file" class="modalWindow_attach" multiple accept="image/*"><br>
+                <!-- end -->
+                
+                <!-- This is captcha container, you have to comment it if you dont need captcha in your form-->
+                <!-- begin -->
+                <div class="g-recaptcha" data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"></div><br>
+                <!-- end -->
+
+                <div class="modalWindow_accept_wrapper">
+                    <input type="submit" class="modalWindow_accept" value="Send">
+                </div>
+                
+                <script>
+                    $(".modalWindow_body").submit(function() 
+                    {
+                        $( ".modalWindow_accept_wrapper" ).html("<center>Please wait...<style>.modalWindow_accept_wrapper {font-size: 24px;}</style></center>");
+                    });
+                </script>
+
+			</form>
+		</div>
+    </section>
+    
+    <script src='https://www.google.com/recaptcha/api.js?hl=en'></script>
+    
+</body>
+</html>
+
